@@ -1,0 +1,40 @@
+{
+  "name": "heritagehub-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "db:init": "node src/db/init.js",
+    "db:seed": "node src/seed/seed.js",
+    "create-admin": "node scripts/create-admin.js",
+    "test:playlists": "node scripts/playlist-check.mjs",
+    "test:launch": "node scripts/launch-check.mjs",
+    "test:realtime": "node scripts/realtime-check.mjs",
+    "db:migrate": "node src/db/migrate.js",
+    "db:setup": "node src/db/init.js && node src/seed/seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.11.0",
+    "compression": "^1.8.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.12.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^10.1.0",
+    "pg": "^8.13.1",
+    "socket.io": "^4.8.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "smtp-server": "^3.19.20",
+    "socket.io-client": "^4.8.4"
+  }
+}

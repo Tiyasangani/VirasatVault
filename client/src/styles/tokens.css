@@ -1,0 +1,45 @@
+/* Design tokens. Change the palette here and the whole site follows. */
+:root {
+  --primary: #3a2a1e;          /* deep earthy brown */
+  --primary-hover: #2a1d14;
+  --secondary: #9a4e35;        /* muted terracotta */
+  --accent: #a8872f;           /* antique gold */
+  --accent-soft: #eadfbc;
+  --olive: #56633a;            /* supporting green */
+  --olive-soft: #e2e6cf;
+
+  --bg: #f9f5ea;               /* warm ivory */
+  --surface: #f1eada;          /* soft cream */
+  --surface-2: #e8dfcb;
+  --paper: #fffdf7;
+  --text: #26221e;             /* dark charcoal */
+  --text-2: #4d443b;
+  --muted: #6c6255;            /* warm gray */
+  --line: #d8ccb3;
+  --line-soft: #e6ddc8;
+  --danger: #9b2f23;
+  --warn: #86610f;
+  --info: #3e5868;
+
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* type scale */
+  --fs-hero: clamp(2.5rem, 5.2vw, 4.25rem);
+  --fs-page: clamp(2rem, 3.6vw, 2.9rem);
+  --fs-section: clamp(1.6rem, 2.6vw, 2.15rem);
+  --fs-feature: clamp(1.45rem, 2.2vw, 1.9rem);
+  --fs-card: 1.2rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-meta: 0.8125rem;
+  --fs-label: 0.8125rem;
+  --fs-button: 0.9375rem;
+
+  --radius: 3px;
+  --radius-lg: 6px;
+  --container: 1200px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --header-h: 68px;
+  --space-section: clamp(3.5rem, 7vw, 6rem);
+}

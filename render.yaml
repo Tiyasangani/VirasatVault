@@ -1,0 +1,27 @@
+# Render "Blueprint": describes the whole service so you do not have to click through settings.
+# Dashboard: New > Blueprint > pick your GitHub repository. Fill the values marked "sync: false" when asked.
+services:
+  - type: web
+    name: heritagehub
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - { key: NODE_VERSION, value: "20" }
+      - { key: NODE_ENV, value: production }
+      - { key: SERVE_CLIENT, value: "true" }
+      - { key: DATABASE_SSL, value: "true" }
+      - { key: JWT_SECRET, generateValue: true }
+      - { key: DATABASE_URL, sync: false }          # from Neon
+      - { key: PUBLIC_URL, sync: false }            # https://your-app.onrender.com (or your own domain)
+      - { key: SITE_URL, sync: false }              # same as PUBLIC_URL
+      - { key: CLOUDINARY_URL, sync: false }        # from Cloudinary
+      - { key: SMTP_HOST, sync: false }
+      - { key: SMTP_PORT, value: "587" }
+      - { key: SMTP_USER, sync: false }
+      - { key: SMTP_PASS, sync: false }
+      - { key: MAIL_FROM, sync: false }
+      - { key: VITE_CONTACT_EMAIL, sync: false }    # shown on the Terms and Privacy pages
+      - { key: VITE_SITE_NAME, value: VirasatVault }
